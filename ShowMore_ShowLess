@@ -1,0 +1,25 @@
+//html code
+<div class="content">
+        <p>This is the initial content that will be shown.</p>
+        <p>More content will be displayed when the "Show More" button is clicked.</p>
+        <p class="more-content">This is the hidden content.</p>
+      </div>
+      <button class="show-more">Show More</button>
+
+//js code
+const content = document.querySelector('.content');
+const moreContent = document.querySelector('.more-content');
+const showMoreButton = document.querySelector('.show-more');
+moreContent.style.display='none'
+showMoreButton.addEventListener('click',()=>{
+    if(moreContent.style.display=='none')
+    {
+        moreContent.style.display='block';
+        showMoreButton.textContent='Show less';
+    }
+    else
+    {
+        moreContent.style.display='none';
+        showMoreButton.textContent='Show More';
+    }
+})
